@@ -9,7 +9,7 @@ const NotesList = () =>
 
     const getData= async () =>
         {
-            const res = await fetch("/api/notes/")
+            const res = await fetch("/notes/")
             const data = await res.json()
             console.log(data)
             setNote(data)
@@ -30,7 +30,7 @@ const NotesList = () =>
                     <NoteItem key={index} note={no}/>
                 )}
             </div>
-            <Link to="/note/new" className="floating-button">
+            <Link to="/notes/new" className="floating-button">
                 <Add/>
             </Link>
         </div>

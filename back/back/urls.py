@@ -20,8 +20,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('admins.urls')),
-    path('', TemplateView.as_view(template_name='index.html')),
+    path('', include('admins.urls')),
+    path('api/', TemplateView.as_view(template_name='index.html')),
     path('__debug__/', include('debug_toolbar.urls'))
 
 ]

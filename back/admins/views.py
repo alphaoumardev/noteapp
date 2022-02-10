@@ -4,8 +4,6 @@ from .serializers import NoteSeriliazer
 from .models import Note
 
 
-# Create your views here.
-
 @api_view(['GET'])
 def newRoute(request):
     routes = [
@@ -73,17 +71,3 @@ def operation_pk(request, pk):
         notes = Note.objects.get(id=pk)
         notes.delete()
         return Response("The note is deleted")
-
-# @api_view(['POST'])
-# def createNote(request):
-#
-#
-#
-# @api_view(['PUT'])
-# def updateNote(request, pk):
-#
-#
-#
-# @api_view(['DELETE'])
-# def deleteNote(request, pk):
-#
